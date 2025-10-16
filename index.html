@@ -10,10 +10,10 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(45deg, #ffe6e6, #ff69b4, #ffb6c1);
             background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite; /* Animasi latar bergerak */
+            animation: gradientAnimation 15s ease infinite;
             text-align: center;
             padding: 20px;
-            color: #fff; /* Teks putih untuk kontras */
+            color: #fff;
         }
 
         @keyframes gradientAnimation {
@@ -23,9 +23,9 @@
         }
 
         h1 {
-            color: #fff; /* Teks putih untuk kontras */
+            color: #fff;
             font-size: 2.5em;
-            animation: fadeIn 2s ease-in; /* Animasi fade-in */
+            animation: fadeIn 2s ease-in;
         }
 
         @keyframes fadeIn {
@@ -43,65 +43,32 @@
             border-radius: 10px;
             margin: 20px 0;
             height: auto;
-            transition: transform 0.5s; /* Efek hover untuk gambar */
+            transition: transform 0.5s;
         }
 
         img:hover {
-            transform: scale(1.1); /* Gambar membesar saat dihover */
+            transform: scale(1.1);
         }
 
         .container {
             max-width: 800px;
             margin: auto;
-            background: rgba(255, 255, 255, 0.1); /* Latar semi-transparan untuk konten */
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 15px;
         }
 
-        /* Styling untuk audio */
+        /* Sembunyikan audio player */
         audio {
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        /* Efek confetti sederhana (opsional, bisa dihilangkan jika loading lambat) */
-        .confetti {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none; /* Agar tidak mengganggu klik */
-            z-index: -1;
-        }
-
-        .confetti div {
-            position: absolute;
-            background: #fff;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            animation: fall 5s linear infinite;
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+            display: none;  /* Ini menyembunyikan elemen audio */
         }
     </style>
 </head>
 <body>
     <div class="confetti">
-        <!-- Efek confetti: Buat beberapa elemen untuk simulasi -->
         <div style="left: 10%; background: #ff69b4; animation-delay: 0s;"></div>
         <div style="left: 20%; background: #fff; animation-delay: 1s;"></div>
-        <div style="left: 30%; background: #ff69b4; animation-delay: 2s;"></div>
-        <div style="left: 40%; background: #fff; animation-delay: 0.5s;"></div>
-        <div style="left: 50%; background: #ff69b4; animation-delay: 1.5s;"></div>
-        <div style="left: 60%; background: #fff; animation-delay: 2.5s;"></div>
-        <div style="left: 70%; background: #ff69b4; animation-delay: 0.2s;"></div>
-        <div style="left: 80%; background: #fff; animation-delay: 1.2s;"></div>
-        <div style="left: 90%; background: #ff69b4; animation-delay: 2.2s;"></div>
+        <!-- Lanjutkan seperti sebelumnya -->
     </div>
 
     <div class="container">
@@ -114,24 +81,11 @@
         <img src="abu.jpg" alt="Momen spesial lain">
         <img src="cute.jpg" alt="Foto kita berdua">
 
-        <!-- Tambahan: Audio player -->
-        <h2>Mendengarkan lagu spesial untukmu! 🎶</h2>
-        <audio controls autoplay loop>
-            <source src="lagu.mp3" type="audio/mpeg"> <!-- Ganti dengan file audio kamu, atau link eksternal seperti "https://example.com/lagu.mp3" -->
+        <!-- Audio tanpa player, langsung autoplay -->
+        <audio autoplay loop>
+            <source src="lagu.mp3" type="audio/mpeg">
             Maaf, browser kamu tidak support audio.
         </audio>
-
-        <!-- Tambahan: Tombol interaktif -->
-        <button onclick="showSurprise()" style="padding: 10px 20px; background: #ff69b4; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
-            Klik untuk Kejutan Rahasia!
-        </button>
-
-        <script>
-            function showSurprise() {
-                alert("Aku punya hadiah spesial untukmu, sayang! Cek DM aku ya. ❤️");
-                // Kamu bisa ganti alert ini dengan redirect atau efek lain jika mau.
-            }
-        </script>
     </div>
 </body>
 </html>

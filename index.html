@@ -38,15 +38,23 @@
             color: #fff;
         }
 
+        /* CSS untuk gambar dalam satu baris */
+        .image-row {
+            display: flex;  /* Menggunakan flexbox */
+            justify-content: center;  /* Pusatkan */
+            gap: 20px;  /* Jarak antara gambar */
+            flex-wrap: wrap;  /* Agar responsive di mobile */
+        }
+
         img {
-            width: 10%;
+            width: 30%;  /* Set width agar pas dalam satu baris */
             border-radius: 10px;
-            margin: 20px 0;
+            height: auto;
             transition: transform 0.5s;
         }
 
         img:hover {
-            transform: scale(0.1);
+            transform: scale(1.1);
         }
 
         .container {
@@ -59,7 +67,7 @@
 
         /* Sembunyikan audio player */
         audio {
-            display: none;  /* Ini menyembunyikan elemen audio */
+            display: none;
         }
     </style>
 </head>
@@ -76,18 +84,19 @@
             Panjang umur dan sehat-sehat terus kii yaa sayangg. Kepikiranka buat begini karena merasa agak kurang yang saya kasi kii kalau cuma kado. Semoga ayangg suka, dan suka juga nanti kadonya. Lovee Youuu sayangggg kuu ❤️<br><br>
             Dari: Fatur ireng jeleg
         </p>
-        <img src="ps.jpg" alt="Foto kita berdua">
-        <img src="abu.jpg" alt="Momen spesial lain">
-        <img src="cute.jpg" alt="Foto kita berdua">
 
-        <!-- Audio tanpa player, langsung autoplay -->
-        <audio autoplay loop>
+        <!-- Bagian gambar dalam satu baris -->
+        <div class="image-row">
+            <img src="ps.jpg" alt="Foto kita berdua">
+            <img src="abu.jpg" alt="Momen spesial lain">
+            <img src="cute.jpg" alt="Foto kita berdua">
+        </div>
+
+        <!-- Audio tanpa player, langsung autoplay dengan muted untuk mengatasi blokir -->
+        <audio autoplay loop muted>  <!-- Tambah muted untuk memastikan autoplay -->
             <source src="lagu.mp3" type="audio/mpeg">
             Maaf, browser kamu tidak support audio.
         </audio>
     </div>
 </body>
 </html>
-
-
-
